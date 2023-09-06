@@ -1,12 +1,22 @@
-import React from 'react'
-import { Fragment } from 'react'
+import Link from 'next/link';
 
-export default function Layout(props) {
+import classes from './main-header.module.css';
+
+function MainHeader() {
   return (
-    <Fragment>
-      <header></header>
-      <main>{props.children}</main>
-    </Fragment>
+    <header className={classes.header}>
+      <div className={classes.logo}>
+        <Link href='/'>NextEvents</Link>
+      </div>
+      <nav className={classes.navigation}>
+        <ul>
+          <li>
+            <Link href='/events'>Browse All Events</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-  
 }
+
+export default MainHeader;
