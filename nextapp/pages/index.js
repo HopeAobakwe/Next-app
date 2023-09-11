@@ -4,6 +4,10 @@ import {getFeaturedEvents} from '../helpers/api-util';
 
 
 function HomePage(props) {
+
+
+
+
   return (
     <div>
       <EventList items={props.events} />
